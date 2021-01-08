@@ -6,11 +6,6 @@ spring:
 server:
   port: 8001
 
-spring:
-  profiles: dev
-  application:
-    name: springcloud-config-dept
-
 # mybatis配置
 mybatis:
   type-aliases-package: com.kuang.springcloud.pojo
@@ -19,8 +14,9 @@ mybatis:
 
 # Spring配置
 spring:
+  profiles: dev
   application:
-    name: springcloud-provider-dept
+    name: springcloud-config-dept
   datasource: # 数据源
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -46,11 +42,6 @@ info:
 server:
   port: 8001
 
-spring:
-  profiles: test
-  application:
-    name: springcloud-config-dept
-
 # mybatis配置
 mybatis:
   type-aliases-package: com.kuang.springcloud.pojo
@@ -59,8 +50,9 @@ mybatis:
 
 # Spring配置
 spring:
+  profiles: test
   application:
-    name: springcloud-provider-dept
+    name: springcloud-config-dept
   datasource: # 数据源
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
